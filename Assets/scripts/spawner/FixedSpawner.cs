@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class FixedSpawner : SpawnerBase
 {
     [SerializeField] List<Wave> waves = new List<Wave>();
-    int waveCounter = 0;
+    
 
     void Start()
     {

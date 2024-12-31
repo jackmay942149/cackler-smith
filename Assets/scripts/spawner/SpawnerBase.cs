@@ -26,6 +26,7 @@ public class SpawnerBase : MonoBehaviour
     [SerializeField] List<GameObject> enemyPrefabs;
     Vector3 spawnPos = Vector3.zero;
     [HideInInspector] public bool spawningCompleted = false;
+    protected int waveCounter = 0;
 
     private void Awake()
     {
@@ -36,6 +37,15 @@ public class SpawnerBase : MonoBehaviour
     {
         for (int i = 0; i < wave.elements.Count; i++)
         {
+            if (i==5)
+            {
+                foreach (EnemyColor enemyColor in wave.elements)
+                {
+                    Debug.Log(enemyColor);
+                }
+                
+            }
+
             spawnPos.y = ySpawnPos[i];
             if (wave.elements[i] != EnemyColor.None)
             {
