@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7650054073416244732}
   - component: {fileID: 177869608255045827}
   - component: {fileID: 6480574524167125069}
+  - component: {fileID: 2617229748726408350}
   m_Layer: 0
   m_Name: enemy-yellow
   m_TagString: Untagged
@@ -104,6 +105,8 @@ MonoBehaviour:
   health: -1
   speed: 0.25
   refreshRate: 2
+  hitSpeed: 0.5
+  hitRotSpeed: 10
 --- !u!61 &6480574524167125069
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,3 +153,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3333334, y: 0.8333333}
   m_EdgeRadius: 0
+--- !u!50 &2617229748726408350
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2381494961289282584}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0

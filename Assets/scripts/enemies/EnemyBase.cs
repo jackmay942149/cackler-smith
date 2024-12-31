@@ -4,12 +4,15 @@ public class EnemyBase : MonoBehaviour
 {
     [Header("Basic Enemy Values")]
     [SerializeField] int health;
-    [SerializeField] float speed;
+    [SerializeField] protected float speed;
     [SerializeField] int refreshRate;
+    [SerializeField] float hitSpeed;
+    [SerializeField] float hitRotSpeed = 10;
 
     // Tracker Values
     int refreshRateCounter = 0;
     Vector3 newPos;
+    protected Vector3 hitDir = Vector3.zero;
 
 
     void Start()
@@ -32,8 +35,17 @@ public class EnemyBase : MonoBehaviour
 
     void RefreshUpdate()
     {
-        newPos.x -= speed;
-        transform.position = newPos;
+        if (hitDir == Vector3.zero)
+        {
+            newPos.x -= speed;
+            transform.position = newPos;
+        }
+        else
+        {
+            transform.position += hitDir * hitSpeed;
+            transform.Rotate(Vector3.forward * hitRotSpeed * Mathf.Sign(hitDir.y));
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -46,6 +58,14 @@ public class EnemyBase : MonoBehaviour
         {
             HitFlower(flower); 
         }
+        else if (other.TryGetComponent<EnemyBase>(out EnemyBase enemy))
+        {
+            HitEnemy(enemy);
+        }
+        else if (other.TryGetComponent<PlayerController>(out PlayerController player))
+        {
+            HitPlayer(player);
+        }
     }
 
     protected virtual void HitFlower(Flower flower)
@@ -53,14 +73,32 @@ public class EnemyBase : MonoBehaviour
         flower.Destroy();
     }
 
-    protected void HitBubble(Bubble bubble)
+    protected virtual void HitBubble(Bubble bubble)
     {
         health -= 1;
+        bubble.Destroy();
         if (health == 0)
         {
             Destroy(gameObject);
         }
-        bubble.Destroy();
+    }
+
+    protected virtual void HitPlayer(PlayerController player)
+    {
+        Debug.Log("Killed Player!");
+        Destroy(gameObject);
+    }
+
+    protected virtual void HitEnemy(EnemyBase enemy)
+    {
+        if (hitDir == Vector3.zero)
+        {
+            hitDir = transform.position - enemy.transform.position;
+        }
+        else
+        {
+            Destroy(gameObject);   
+        }
     }
 
 }
