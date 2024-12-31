@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyBase : MonoBehaviour
 {
     [Header("Basic Enemy Values")]
-    [SerializeField] int health;
+    [SerializeField] protected int health;
     [SerializeField] protected float speed;
     [SerializeField] int refreshRate;
     [SerializeField] float hitSpeed;
@@ -11,11 +11,11 @@ public class EnemyBase : MonoBehaviour
 
     // Tracker Values
     int refreshRateCounter = 0;
-    Vector3 newPos;
-    protected Vector3 hitDir = Vector3.zero;
+    protected Vector3 newPos;
+    public Vector3 hitDir = Vector3.zero;
 
 
-    void Start()
+    void Awake()
     {
         newPos = transform.position;
     }
@@ -33,7 +33,7 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
-    void RefreshUpdate()
+    protected virtual void RefreshUpdate()
     {
         if (hitDir == Vector3.zero)
         {
@@ -57,6 +57,10 @@ public class EnemyBase : MonoBehaviour
         else if (other.TryGetComponent<Flower>(out Flower flower))
         {
             HitFlower(flower); 
+        }
+        else if (other.TryGetComponent<EnemyBoss>(out EnemyBoss boss))
+        {
+            HitBoss(boss);
         }
         else if (other.TryGetComponent<EnemyBase>(out EnemyBase enemy))
         {
@@ -101,4 +105,16 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
+    protected virtual void HitBoss(EnemyBoss boss)
+    {
+        if (hitDir == Vector3.zero)
+        {
+            return;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+    }
 }

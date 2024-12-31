@@ -786,7 +786,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners:
   - {fileID: 3563165169918142754, guid: e7660749438b1644dbf5192ece0acdb2, type: 3}
-  - {fileID: 2478236112109220613, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
 --- !u!4 &1048447719
 Transform:
   m_ObjectHideFlags: 0

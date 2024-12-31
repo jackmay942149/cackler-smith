@@ -24,7 +24,7 @@ public class SpawnerBase : MonoBehaviour
     [SerializeField] float xSpawnPos;
     [SerializeField] List<float> ySpawnPos = new List<float>();
     [SerializeField] List<GameObject> enemyPrefabs;
-    Vector3 spawnPos = Vector3.zero;
+    protected Vector3 spawnPos = Vector3.zero;
     [HideInInspector] public bool spawningCompleted = false;
     protected int waveCounter = 0;
 
