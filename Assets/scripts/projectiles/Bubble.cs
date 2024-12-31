@@ -33,4 +33,9 @@ public class Bubble : MonoBehaviour
         newPos.x = transform.position.x + speed;
         transform.position = newPos;
     }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
 }
