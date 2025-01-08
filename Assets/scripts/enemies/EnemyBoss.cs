@@ -40,7 +40,8 @@ public class EnemyBoss : EnemyBase
 
     protected override void HitBubble(Bubble bubble)
     {
-        if (health == 0)
+
+        if (health == 1) // health gets reduced in base func
         {
             spawner.transform.parent = null;
             spawner.spawningCompleted = true;

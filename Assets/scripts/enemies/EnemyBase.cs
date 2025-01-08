@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBase : MonoBehaviour
 {
@@ -89,7 +90,8 @@ public class EnemyBase : MonoBehaviour
 
     protected virtual void HitPlayer(PlayerController player)
     {
-        Debug.Log("Killed Player!");
+        Debug.LogWarning("Killed Player!");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Destroy(gameObject);
     }
 
