@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sp_Background_BalloonThree04_0: -4226390102843624146
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

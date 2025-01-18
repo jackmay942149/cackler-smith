@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RMR_BannerTop02_0: 40875567012903947
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
