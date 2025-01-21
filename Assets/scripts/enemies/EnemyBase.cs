@@ -10,15 +10,24 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] float hitSpeed;
     [SerializeField] float hitRotSpeed = 10;
 
+    [Header("Sprite Animation")]
+    protected SpriteRenderer sr;
+    [SerializeField] protected Sprite defaultSprite;
+    [SerializeField] protected Sprite hitSprite;
+
+    [Header("Tracker Values")]
     // Tracker Values
     int refreshRateCounter = 0;
     protected Vector3 newPos;
     public Vector3 hitDir = Vector3.zero;
 
 
+
     void Awake()
     {
         newPos = transform.position;
+        sr = GetComponent<SpriteRenderer>();
+        
     }
 
     void FixedUpdate()
@@ -36,13 +45,15 @@ public class EnemyBase : MonoBehaviour
 
     protected virtual void RefreshUpdate()
     {
-        if (hitDir == Vector3.zero)
+        
+        if (hitDir == Vector3.zero) // hasnt been hit 
         {
             newPos.x -= speed;
             transform.position = newPos;
+            sr.sprite = defaultSprite;
         }
-        else
-        {
+        else // hit by enemy
+        { 
             transform.position += hitDir * hitSpeed;
             transform.Rotate(Vector3.forward * hitRotSpeed * Mathf.Sign(hitDir.y));
         }
