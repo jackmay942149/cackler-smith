@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3563165169918142754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3406351372627945606}
+  - component: {fileID: 4561346230758513672}
+  m_Layer: 0
+  m_Name: fixed-spawner-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3406351372627945606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563165169918142754}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4561346230758513672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563165169918142754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea168cf9f0891045b4908a500dc3c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRate: 2
+  xSpawnPos: 10
+  ySpawnPos:
+  - 2.4
+  - 1.2
+  - 0
+  - -1.2
+  - -2.4
+  enemyPrefabs:
+  - {fileID: 1400882444721378311, guid: 4c143635cbe2395449cdc829458f74c5, type: 3}
+  - {fileID: 6349526278643193820, guid: c61139912ee6fdf489bb0437d52adcef, type: 3}
+  - {fileID: 4049411513866596194, guid: 63b4dedff8be5b746aef870360132824, type: 3}
+  - {fileID: 6490919601514196357, guid: 55346009894fbdd4b9bda6bcd472fe21, type: 3}
+  - {fileID: 2381494961289282584, guid: 5656e3c2db5fa6346a05e6c71fc92fbc, type: 3}
+  - {fileID: 8186927140087114506, guid: 47a23a9784665ec4986862ced8fb1805, type: 3}
+  spawningCompleted: 0
+  waves:
+  - elements: 0600000006000000000000000600000006000000
+  - elements: 0600000000000000000000000000000006000000
+  - elements: 0000000000000000000000000000000000000000

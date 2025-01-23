@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8901955464310796577}
   - component: {fileID: 6183141555836337724}
   m_Layer: 0
-  m_Name: boss-green
+  m_Name: boss-yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

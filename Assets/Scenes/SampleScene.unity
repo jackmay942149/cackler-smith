@@ -171,7 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 372359976}
   m_Layer: 0
-  m_Name: score
+  m_Name: score-ns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -794,8 +794,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawners:
-  - {fileID: 3563165169918142754, guid: e7660749438b1644dbf5192ece0acdb2, type: 3}
-  - {fileID: 1584002541786770990, guid: 139f2801e74d047468aab524624d57ca, type: 3}
+  - {fileID: 2478236112109220613, guid: 2e2f5c7b4d678b24da036e9898c8b962, type: 3}
+  - {fileID: 1584002541786770990, guid: 9b6f7c652be391e4b9e12e78c081c246, type: 3}
+  - {fileID: 3563165169918142754, guid: 15e37a9a3a1add94bb958327a1e9ab72, type: 3}
+  - {fileID: 3563165169918142754, guid: fdbc8828210adc042839f53998e7b7a1, type: 3}
+  - {fileID: 2478236112109220613, guid: 2e2f5c7b4d678b24da036e9898c8b962, type: 3}
+  - {fileID: 2478236112109220613, guid: 6e91a71cdc15df1478f816f79dab714f, type: 3}
+  - {fileID: 2478236112109220613, guid: 6e91a71cdc15df1478f816f79dab714f, type: 3}
+  - {fileID: 2478236112109220613, guid: 6e91a71cdc15df1478f816f79dab714f, type: 3}
+  - {fileID: 2478236112109220613, guid: 6e91a71cdc15df1478f816f79dab714f, type: 3}
+  - {fileID: 2478236112109220613, guid: 6e91a71cdc15df1478f816f79dab714f, type: 3}
 --- !u!4 &1048447719
 Transform:
   m_ObjectHideFlags: 0
@@ -821,7 +829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1089307437}
   m_Layer: 0
-  m_Name: pause
+  m_Name: pause-ns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,7 +891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1360153624}
   m_Layer: 0
-  m_Name: main-menu
+  m_Name: main-menu-ns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -945,7 +953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1535307501}
   m_Layer: 0
-  m_Name: notes
+  m_Name: notes-ns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1007,7 +1015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1956914196}
   m_Layer: 0
-  m_Name: endscreen
+  m_Name: endscreen-ns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

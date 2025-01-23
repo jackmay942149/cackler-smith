@@ -107,6 +107,10 @@ MonoBehaviour:
   refreshRate: 2
   hitSpeed: 0.5
   hitRotSpeed: 10
+  defaultSprite: {fileID: 1636351308121355474, guid: 766fdcfdf9859914885136cdaaef7234, type: 3}
+  hitSprite: {fileID: -4151174282187975006, guid: 8b0c2cf9c2648ec42b06888aea92bd97, type: 3}
+  hitDelay: 0.1
+  hitDir: {x: 0, y: 0, z: 0}
 --- !u!61 &-5017561469268292855
 BoxCollider2D:
   m_ObjectHideFlags: 0

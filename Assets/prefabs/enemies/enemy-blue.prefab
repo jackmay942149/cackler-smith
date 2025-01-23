@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9052599119238612551, guid: b369ead8a4fad2747800ed25146eca89, type: 3}
+  m_Sprite: {fileID: -5812325610188126883, guid: fbdcec964fd70b5418f32ed5e2df36d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,6 +107,10 @@ MonoBehaviour:
   refreshRate: 2
   hitSpeed: 0.5
   hitRotSpeed: 10
+  defaultSprite: {fileID: -5812325610188126883, guid: fbdcec964fd70b5418f32ed5e2df36d4, type: 3}
+  hitSprite: {fileID: -4151174282187975006, guid: 8b0c2cf9c2648ec42b06888aea92bd97, type: 3}
+  hitDelay: 0.1
+  hitDir: {x: 0, y: 0, z: 0}
 --- !u!61 &-4858769787140136089
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8901955464310796577}
   - component: {fileID: 6183141555836337724}
   m_Layer: 0
-  m_Name: boss-green
+  m_Name: boss-red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,12 +103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b071a1d6206ee2841bcd2778e9b74261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10
   speed: 0.1
   refreshRate: 2
   hitSpeed: 0
   hitRotSpeed: 0
-  defaultSprite: {fileID: 7796541364549360707, guid: d2e9203f2a174ea438a467d8634eaee9, type: 3}
+  defaultSprite: {fileID: -4765170803021818136, guid: 51fc95c5a845e9740bac062ed60acefe, type: 3}
   hitSprite: {fileID: -4151174282187975006, guid: 8b0c2cf9c2648ec42b06888aea92bd97, type: 3}
   hitDelay: 0.1
   hitDir: {x: 0, y: 0, z: 0}
@@ -244,11 +244,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2735175979145337647, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
       propertyPath: enemySpawnWeights.Array.size
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735175979145337647, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
+      propertyPath: enemySpawnWeights.Array.data[1].color
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2735175979145337647, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
       propertyPath: enemySpawnWeights.Array.data[0].spawnWeight
-      value: 1
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735175979145337647, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
+      propertyPath: enemySpawnWeights.Array.data[1].spawnWeight
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

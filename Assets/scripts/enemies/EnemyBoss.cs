@@ -8,9 +8,6 @@ public class EnemyBoss : EnemyBase
     [SerializeField] float minXPos;
     RandomSpawner spawner;
 
-    [SerializeField] float hitDelay;
-    float delayTimer;
-
 
     
 

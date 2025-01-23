@@ -6,5 +6,6 @@ public class EnemyGreen : EnemyBase
     {
         hitDir = transform.position - player.transform.position;
         sr.sprite = hitSprite;
+        delayTimer = 0.0f;
     }
 }

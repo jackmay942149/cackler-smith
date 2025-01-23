@@ -14,6 +14,8 @@ public class EnemyBase : MonoBehaviour
     protected SpriteRenderer sr;
     [SerializeField] protected Sprite defaultSprite;
     [SerializeField] protected Sprite hitSprite;
+    [SerializeField] protected float hitDelay;
+    protected float delayTimer;
 
     [Header("Tracker Values")]
     // Tracker Values
@@ -28,6 +30,11 @@ public class EnemyBase : MonoBehaviour
         newPos = transform.position;
         sr = GetComponent<SpriteRenderer>();
         
+    }
+
+    private void Update()
+    {
+        delayTimer += Time.deltaTime;
     }
 
     void FixedUpdate()
@@ -45,12 +52,16 @@ public class EnemyBase : MonoBehaviour
 
     protected virtual void RefreshUpdate()
     {
-        
+        if (delayTimer > hitDelay)
+        {
+            sr.sprite = defaultSprite;
+            delayTimer = 0;
+        }
+
         if (hitDir == Vector3.zero) // hasnt been hit 
         {
             newPos.x -= speed;
             transform.position = newPos;
-            sr.sprite = defaultSprite;
         }
         else // hit by enemy
         { 
@@ -91,6 +102,9 @@ public class EnemyBase : MonoBehaviour
 
     protected virtual void HitBubble(Bubble bubble)
     {
+        sr.sprite = hitSprite;
+        delayTimer = 0.0f;
+
         health -= 1;
         bubble.Destroy();
         if (health == 0)
@@ -111,6 +125,8 @@ public class EnemyBase : MonoBehaviour
         if (hitDir == Vector3.zero)
         {
             hitDir = transform.position - enemy.transform.position;
+            sr.sprite = hitSprite;
+            delayTimer = 0.0f;
         }
         else
         {
