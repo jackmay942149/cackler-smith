@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 879483412734335100}
   - component: {fileID: 8577160506490499549}
-  - component: {fileID: 1131583953419504101}
+  - component: {fileID: 6720192488011893093}
   - component: {fileID: 8901955464310796577}
   - component: {fileID: 6183141555836337724}
   m_Layer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7796541364549360707, guid: d2e9203f2a174ea438a467d8634eaee9, type: 3}
+  m_Sprite: {fileID: -5329350208140723767, guid: 327cd67dd74182f4282e209f5cbd6405, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1131583953419504101
+--- !u!114 &6720192488011893093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,19 +100,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4250165152100341829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b071a1d6206ee2841bcd2778e9b74261, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d84cc7615d564e4d91d3cad936821d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10
   speed: 0.1
   refreshRate: 2
   hitSpeed: 0
   hitRotSpeed: 0
-  defaultSprite: {fileID: 7796541364549360707, guid: d2e9203f2a174ea438a467d8634eaee9, type: 3}
+  defaultSprite: {fileID: -5329350208140723767, guid: 327cd67dd74182f4282e209f5cbd6405, type: 3}
   hitSprite: {fileID: -4151174282187975006, guid: 8b0c2cf9c2648ec42b06888aea92bd97, type: 3}
   hitDelay: 0.1
   hitDir: {x: 0, y: 0, z: 0}
   minXPos: 8.5
+  xPositions: {x: 0, y: 8.5}
 --- !u!61 &8901955464310796577
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -198,6 +199,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: random-spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 2478236112109220613, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2629124251158058648, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -244,11 +249,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2735175979145337647, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
       propertyPath: enemySpawnWeights.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735175979145337647, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
+      propertyPath: enemySpawnWeights.Array.data[0].color
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735175979145337647, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
+      propertyPath: enemySpawnWeights.Array.data[1].color
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735175979145337647, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
+      propertyPath: enemySpawnWeights.Array.data[2].color
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2735175979145337647, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
       propertyPath: enemySpawnWeights.Array.data[0].spawnWeight
-      value: 1
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735175979145337647, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
+      propertyPath: enemySpawnWeights.Array.data[1].spawnWeight
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735175979145337647, guid: 530e690dad275194fa1e559628dc6e9c, type: 3}
+      propertyPath: enemySpawnWeights.Array.data[2].spawnWeight
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

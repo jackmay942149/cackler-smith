@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8581233437906196037}
   - component: {fileID: -5017561469268292855}
   - component: {fileID: 1648486162845101498}
-  m_Layer: 0
+  - component: {fileID: 5230855807291536412}
+  m_Layer: 3
   m_Name: enemy-orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: -876546973899608171, guid: f746c61e1cef17843a4704a7212e4a48, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5490048565198126619, guid: 7b399340095eb5247bf29d90133d4d35, type: 3}
+  m_Sprite: {fileID: 1636351308121355474, guid: 766fdcfdf9859914885136cdaaef7234, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,3 +185,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &5230855807291536412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4049411513866596194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c761c3da4ca7cd49b0218a873d44d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

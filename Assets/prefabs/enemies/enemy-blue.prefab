@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8765614015777548469}
   - component: {fileID: -4858769787140136089}
   - component: {fileID: -3783853191796642065}
-  m_Layer: 0
+  - component: {fileID: -3649755621737221562}
+  m_Layer: 3
   m_Name: enemy-blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: -876546973899608171, guid: f746c61e1cef17843a4704a7212e4a48, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -184,3 +185,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &-3649755621737221562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6349526278643193820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c761c3da4ca7cd49b0218a873d44d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

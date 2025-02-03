@@ -18,8 +18,11 @@ MonoBehaviour:
   m_RendererData: {fileID: 0}
   m_RendererDataList:
   - {fileID: 11400000, guid: 424799608f7334c24bf367e4bbfa7f9a, type: 2}
-  - {fileID: 11400000, guid: 41615baa37cdbe24bbf509bf95fb0744, type: 2}
+  - {fileID: 11400000, guid: aa449f3ef0bd74043b9f06fe9805a1ba, type: 2}
   - {fileID: 11400000, guid: 30e9a972e3df4c14f8ea0882d04ea550, type: 2}
+  - {fileID: 11400000, guid: b5d194ed388c64049bf037b5103082a9, type: 2}
+  - {fileID: 11400000, guid: 7e5bfa6d6f409944f8262c2446611d5b, type: 2}
+  - {fileID: 11400000, guid: 58d532b1c4453514a839b2d2efddfbf7, type: 2}
   m_DefaultRendererIndex: 1
   m_RequireDepthTexture: 0
   m_RequireOpaqueTexture: 0
@@ -80,7 +83,7 @@ MonoBehaviour:
   m_UseAdaptivePerformance: 1
   m_ColorGradingMode: 0
   m_ColorGradingLutSize: 32
-  m_AllowPostProcessAlphaOutput: 0
+  m_AllowPostProcessAlphaOutput: 1
   m_UseFastSRGBLinearConversion: 0
   m_SupportDataDrivenLensFlare: 1
   m_SupportScreenSpaceLensFlare: 1

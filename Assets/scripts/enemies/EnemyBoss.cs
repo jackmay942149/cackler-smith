@@ -5,8 +5,9 @@ public class EnemyBoss : EnemyBase
     // Cap Movement xpos
     // Stop Hit Direction Stuff
     // Lose Health on hit
-    [SerializeField] float minXPos;
-    RandomSpawner spawner;
+    [SerializeField] protected float minXPos;
+    protected float minDist = 0.2f;
+    protected RandomSpawner spawner;
 
 
     
@@ -16,7 +17,7 @@ public class EnemyBoss : EnemyBase
         spawner = GetComponentInChildren<RandomSpawner>();
     }
 
-    private void Update()
+    protected void Update()
     {
         delayTimer += Time.deltaTime;
     }
@@ -29,11 +30,16 @@ public class EnemyBoss : EnemyBase
             delayTimer = 0;
         }
 
-        newPos.x -= speed;
-        if (newPos.x > minXPos)
+        newPos.x = transform.position.x;
+        if (newPos.x - speed > minXPos)
         {
-            transform.position = newPos;
+            newPos.x -= speed;
         }
+        else if (newPos.x + speed < minXPos)
+        {
+            newPos.x += speed;
+        }
+        transform.position = newPos;
     }
 
     protected override void HitEnemy(EnemyBase enemy)

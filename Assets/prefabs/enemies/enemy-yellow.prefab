@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 177869608255045827}
   - component: {fileID: 6480574524167125069}
   - component: {fileID: 2617229748726408350}
-  m_Layer: 0
+  - component: {fileID: 6692454041429662454}
+  m_Layer: 3
   m_Name: enemy-yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: -876546973899608171, guid: f746c61e1cef17843a4704a7212e4a48, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6363926247146173466, guid: 2b7b294241d2cd4438ba4b8396c75fa5, type: 3}
+  m_Sprite: {fileID: -5329350208140723767, guid: 327cd67dd74182f4282e209f5cbd6405, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,6 +110,7 @@ MonoBehaviour:
   hitRotSpeed: 10
   defaultSprite: {fileID: -5329350208140723767, guid: 327cd67dd74182f4282e209f5cbd6405, type: 3}
   hitSprite: {fileID: -4151174282187975006, guid: 8b0c2cf9c2648ec42b06888aea92bd97, type: 3}
+  hitDelay: 0
   hitDir: {x: 0, y: 0, z: 0}
 --- !u!61 &6480574524167125069
 BoxCollider2D:
@@ -183,3 +185,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &6692454041429662454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2381494961289282584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c761c3da4ca7cd49b0218a873d44d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
