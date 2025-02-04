@@ -287,7 +287,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 91993427}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 686608271}
+        m_TargetAssemblyTypeName: ButtonUtils, Assembly-CSharp
+        m_MethodName: LoadSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &91993427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,7 +1060,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 397388690}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 686608271}
+        m_TargetAssemblyTypeName: ButtonUtils, Assembly-CSharp
+        m_MethodName: AppQuit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &397388690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1656,19 +1680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c6ed61a66471ef448d1f66344c35215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonsToFadeIn: []
-  textToFadeIn: []
-  spritesToFadeIn: []
-  buttonsToFadeOut:
-  - {fileID: 2072616554}
-  - {fileID: 196248198}
-  - {fileID: 1255768450}
-  textToFadeOut:
-  - {fileID: 1045522340}
-  - {fileID: 803982929}
-  - {fileID: 290969678}
-  spritesToFadeOut:
-  - {fileID: 824915390}
+  fadeOutObj: {fileID: 977146805}
   sceneLoadTime: 1
 --- !u!1 &780073243
 GameObject:
@@ -2478,7 +2490,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 686608271}
         m_TargetAssemblyTypeName: ButtonUtils, Assembly-CSharp
-        m_MethodName: LoadCampaign
+        m_MethodName: LoadCharSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2538,7 +2550,7 @@ GameObject:
   - component: {fileID: 1102638810}
   - component: {fileID: 1102638809}
   - component: {fileID: 1102638808}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pixel-render-all
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2630,7 +2642,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -50, y: 0, z: 0}
-  m_LocalScale: {x: 18, y: 6.5, z: 1}
+  m_LocalScale: {x: 18, y: 6.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

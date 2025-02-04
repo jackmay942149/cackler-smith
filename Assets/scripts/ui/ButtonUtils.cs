@@ -1,78 +1,99 @@
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class ButtonUtils : MonoBehaviour
 {
-    bool loadingMainMenu = false;
-    [SerializeField] GameObject[] buttonsToFadeIn;
-    [SerializeField] GameObject[] textToFadeIn;
-    [SerializeField] GameObject[] spritesToFadeIn; 
+    bool loading = false;
+    [SerializeField] GameObject fadeOutObj;
+    MeshRenderer mr;
 
-    [SerializeField] GameObject[] buttonsToFadeOut;
-    [SerializeField] GameObject[] textToFadeOut;
-    [SerializeField] GameObject[] spritesToFadeOut;
+    float startLoadingTime = 0.0f;
+    bool starting = true;
 
     [SerializeField] float sceneLoadTime = 1.0f;
     float sceneLoadingTime = 0.0f;
 
     AsyncOperation loadScene;
 
+    private void Start()
+    {
+        mr = fadeOutObj.GetComponent<MeshRenderer>();
+    }
+
+
+
     private void Update()
     {
-        if (loadingMainMenu)
+        if (loading)
         {
             sceneLoadingTime += Time.deltaTime;
 
             if (sceneLoadingTime > sceneLoadTime)
-            { 
-                loadingMainMenu = false;
+            {
+                loading = false;
                 loadScene.allowSceneActivation = true;
                 return;
             }
 
-            float fadeInTransparency = sceneLoadingTime/sceneLoadTime;
-            float fadeOutTransparency = 1 - fadeInTransparency;
+            float fadeOutTransparency = 1 - Mathf.Pow(sceneLoadingTime/ sceneLoadTime, 0.5f);
+            Color fadeOutColour = new Color(1.0f, 1.0f, 1.0f, fadeOutTransparency);
+            mr.material.SetColor("_MainColor", fadeOutColour);
+        }
 
-            foreach (var button in buttonsToFadeIn)
+        if (starting)
+        {
+            startLoadingTime += Time.deltaTime;
+
+            float fadeInTransparency = Mathf.Pow(startLoadingTime / sceneLoadTime, 2f);
+            Color fadeInColour = new Color(1.0f, 1.0f, 1.0f, fadeInTransparency);
+            mr.material.SetColor("_MainColor", fadeInColour);
+
+            if (startLoadingTime > sceneLoadTime)
             {
-                button.GetComponent<Image>().color = new Color(1, 1, 1, fadeInTransparency);
+                starting = false;
+                return;
             }
 
-            foreach (var text in textToFadeIn)
-            {
-                text.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, fadeInTransparency);
-            }
-
-            foreach (var text in spritesToFadeIn)
-            {
-                text.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, fadeInTransparency);
-            }
-
-            foreach (var button in buttonsToFadeOut)
-            {
-                button.GetComponent<Image>().color = new Color(1, 1, 1, fadeOutTransparency);
-            }
-
-            foreach(var text in textToFadeOut)
-            {
-                text.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, fadeOutTransparency);
-            }
-
-            foreach (var text in spritesToFadeOut)
-            {
-                text.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, fadeOutTransparency);
-            }
+            
         }
 
     }
 
     public void LoadCampaign()
     {
-        loadingMainMenu = true;
-        loadScene = SceneManager.LoadSceneAsync("campaign");
+        LoadLevel("campaign");
+    }
+
+    public void LoadMainMenu()
+    {
+        LoadLevel("main-menu");
+    }
+
+    public void LoadCharSelect()
+    {
+        LoadLevel("char-select");
+    }
+
+    public void LoadSettings()
+    {
+        LoadLevel("settings");
+    }
+
+    public void AppQuit()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+
+    }
+
+    private void LoadLevel(string levelName)
+    {
+        if (loading) return;
+        loading = true;
+        loadScene = SceneManager.LoadSceneAsync(levelName);
         loadScene.allowSceneActivation = false;
     }
 }
