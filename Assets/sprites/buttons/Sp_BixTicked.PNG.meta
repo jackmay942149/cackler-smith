@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 643562e107872a44aaf1add05ed229d4
+guid: 63aa84f55cd377041a474fb779eb5887
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -31230148179674201
-    second: Sp_Menu_ButtonSml01_0
+      213: 7781861841751154806
+    second: Sp_BixTicked_0
+  - first:
+      213: -6178603676883574731
+    second: Sp_BixTicked_1
+  - first:
+      213: -4388092424549005997
+    second: Sp_BixTicked_2
+  - first:
+      213: -6741389346786739996
+    second: Sp_BixTicked_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,7 +63,7 @@ TextureImporter:
   spritePixelsToUnits: 12
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 0
+  alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -96,30 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sp_Menu_ButtonSml01_0
+      name: Sp_BixTicked_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 15
-        height: 11
+        width: 13
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7abb77f785c019ff0800000000000000
-      internalID: -31230148179674201
+      spriteID: 670aeb07d1abefb60800000000000000
+      internalID: 7781861841751154806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sp_BixTicked_1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 5
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 530ae6701b0314aa0800000000000000
+      internalID: -6178603676883574731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sp_BixTicked_2
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 6
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3558c21603d5a13c0800000000000000
+      internalID: -4388092424549005997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sp_BixTicked_3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 15
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e87c244b16c172a0800000000000000
+      internalID: -6741389346786739996
       vertices: []
       indices: 
       edges: []
@@ -138,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sp_Menu_ButtonSml01_0: -31230148179674201
+      Sp_BixTicked_0: 7781861841751154806
+      Sp_BixTicked_1: -6178603676883574731
+      Sp_BixTicked_2: -4388092424549005997
+      Sp_BixTicked_3: -6741389346786739996
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 643562e107872a44aaf1add05ed229d4
+guid: 0fe3e341478a7ee4ca0fbe8cc0b28bc4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -31230148179674201
-    second: Sp_Menu_ButtonSml01_0
+      213: -7394552755764904538
+    second: Sp_BoxTick_0
+  - first:
+      213: 5041704440992227109
+    second: Sp_BoxTick_1
+  - first:
+      213: 2925609519969543149
+    second: Sp_BoxTick_2
+  - first:
+      213: -6873384459565774396
+    second: Sp_BoxTick_3
+  - first:
+      213: -7327763356096399859
+    second: Sp_BoxTick_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,7 +66,7 @@ TextureImporter:
   spritePixelsToUnits: 12
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 0
+  alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -96,30 +108,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sp_Menu_ButtonSml01_0
+      name: Sp_BoxTick_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 15
-        height: 11
+        width: 13
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7abb77f785c019ff0800000000000000
-      internalID: -31230148179674201
+      spriteID: 6ad3fb75275416990800000000000000
+      internalID: -7394552755764904538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sp_BoxTick_1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 6
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52fd9db1a7bb7f540800000000000000
+      internalID: 5041704440992227109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sp_BoxTick_2
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 5
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de3294d9b5ad99820800000000000000
+      internalID: 2925609519969543149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sp_BoxTick_3
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 6
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c944e23045dc90a0800000000000000
+      internalID: -6873384459565774396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sp_BoxTick_4
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 15
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d06ffb14d0e8e4a90800000000000000
+      internalID: -7327763356096399859
       vertices: []
       indices: 
       edges: []
@@ -138,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sp_Menu_ButtonSml01_0: -31230148179674201
+      Sp_BoxTick_0: -7394552755764904538
+      Sp_BoxTick_1: 5041704440992227109
+      Sp_BoxTick_2: 2925609519969543149
+      Sp_BoxTick_3: -6873384459565774396
+      Sp_BoxTick_4: -7327763356096399859
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6923287968627724281}
   - component: {fileID: 4134161667306413018}
   - component: {fileID: 3256990863886963076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,3 +190,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c761c3da4ca7cd49b0218a873d44d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeTime: 10

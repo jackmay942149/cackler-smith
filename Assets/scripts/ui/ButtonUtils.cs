@@ -15,6 +15,8 @@ public class ButtonUtils : MonoBehaviour
 
     AsyncOperation loadScene;
 
+
+
     private void Start()
     {
         mr = fadeOutObj.GetComponent<MeshRenderer>();
@@ -96,4 +98,6 @@ public class ButtonUtils : MonoBehaviour
         loadScene = SceneManager.LoadSceneAsync(levelName);
         loadScene.allowSceneActivation = false;
     }
+
+
 }
