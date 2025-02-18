@@ -5,13 +5,20 @@ public class PlayerProjectiles : MonoBehaviour
     [SerializeField] GameObject bubblePrefab;
     [SerializeField] GameObject flowerPrefab;
 
+    // trackers
+    PlayerController pc;
+
+    void Start(){
+       pc = GetComponent<PlayerController>(); 
+    }
+    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !pc.gamePaused)
         {
             SpawnBubble();
         }
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !pc.gamePaused)
         {
             SpawnFlower();
         }

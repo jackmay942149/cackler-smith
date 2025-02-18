@@ -10,12 +10,28 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Vector2 maxBounds;
     [SerializeField] Vector2 minBounds;
 
+    [Header("Pause Screen")]
+    [SerializeField] GameObject pauseScreen;
+    
     // Trackers
     int refreshRateCounter = 0;
     Vector3 moveDir = Vector3.zero;
-
+    public bool gamePaused = false;
+    
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            gamePaused = !gamePaused;
+            pauseScreen.SetActive(gamePaused);
+            
+            if (gamePaused){
+                Time.timeScale = 0.0f;
+            }
+            else {
+                Time.timeScale = 1.0f;
+            }
+        }
+        
         if (Input.GetKey(KeyCode.D))
         {
             moveDir.x = 1;
