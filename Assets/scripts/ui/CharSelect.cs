@@ -25,4 +25,8 @@ public class CharSelect : MonoBehaviour
         if (index < 0) { index = sprites.Length - 1; }
         sr.sprite = sprites[index];
     }
+
+    void OnDestroy(){
+        PlayerPrefs.SetInt("CharSelect", index);
+    }
 }
